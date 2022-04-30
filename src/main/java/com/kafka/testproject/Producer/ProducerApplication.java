@@ -13,10 +13,12 @@ public class ProducerApplication {
 		SpringApplication.run(ProducerApplication.class, args);
 	}
 
-	@Bean
+/*	@Bean
 	CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate) {
 		return args -> {
-			kafkaTemplate.send("Ajinkya", "Hello from kafka 2");
+			for(int i=0;i<=10000;i++){
+				kafkaTemplate.send("Ajinkya", "Hello from kafka   -->>>"+i);
+			}
 		};
-	}
+	}*/
 }
